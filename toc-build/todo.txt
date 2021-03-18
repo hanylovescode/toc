@@ -1,0 +1,24 @@
+details summary width 
+400px
+
+get rid of img display
+
+1. create a table with meals that has ingredients + calories + prices
+
+1. create little images that can expand
+
+1. create more items
+
+1. fix everything
+
+1. I need a proper table with borders
+
+1. I need a cart; does paypal already have one ? maybe 
+
+1. I need to create best choices
+
+1. add prices to the table; see how many items you have it toc
+
+1. add ingredients 
+
+1.  

@@ -1,0 +1,9 @@
+
+
+There are couple ways we can do this.
+
+1. We can do it through shopify: this is the amount of money you will pay:
+
+1. We can do it using wordpress: this is the amount of money you will pay:
+
+1. We can do it my way: I think the cheapest, and we can attach a paypal button to it. 

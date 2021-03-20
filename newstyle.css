@@ -4,17 +4,12 @@
     justify-content: space-between;
   }
   
-  .box :first-child {
-      align-self: center;
-  }
-
   .card {
     box-shadow: 0 4px 8px 0 rgba(10, 133, 233, 0.2);
-    max-width: 300px;
-    margin: auto;
+    max-width: 3000px;
+    margin-top: 0px;
     text-align: center;
     font-family: arial;
-    float: left;
   }
   
   .price {

@@ -1,36 +1,175 @@
 <!DOCTYPE html>
-<head>
-    <title>The Authentic Taste of Colombia.SD</title>
-    <link rel="stylesheet" type="text/css" href="newstyle.css">
-</head>
-<body>
-    <h2>Checkout:</h2>
-    <!-- TODO: make this work in a cart -->
-    <div class="box">
-    <div class="card">
-        <img src="images/shrimps.jpg" alt="shrimp meal" style="width:50%">
-        <h1>Shrimp Meal</h1>
-        <p class="price" >$19.99</p>
-        <p>A delicious and highly nutritious meal made with shrimps,carrots, and other veggies</p>
-        <p><button onClick="fun()">Add to Cart</button></p>
-        <img src="images/shrimps.jpg" alt="shrimp meal" style="width:50%">
-        <h1>Shrimp Meal</h1>
-        <p class="price" >$19.99</p>
-        <p>A delicious and highly nutritious meal made with shrimps,carrots, and other veggies</p>
-        <p><button onClick="fun()">Add to Cart</button></p>
-    </div>
-    <div class="card">
-        <img src="images/post_uno.jpg" alt="meat meal" style="width:50%">
-	<h1>Meat Meal</h1>
-	<p class="price">$19.99</p>
-	<p>A delicious and highly nutritious meal made with meat,carrots, and other veggies</p>
-	<p><button onClick="fun()">Add to Cart</button></p>
-    <img src="images/post_uno.jpg" alt="meat meal" style="width:50%">
-	<h1>Meat Meal</h1>
-	<p class="price">$19.99</p>
-	<p>A delicious and highly nutritious meal made with meat,carrots, and other veggies</p>
-	<p><button onClick="fun()">Add to Cart</button></p> 
-    </div>
-    </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Taste Of Colombia Menu</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <!-- why is it important to add the JS at the bottom is that a thing for document? -->
+    <!-- <script type="text/javascript" src="workingcart.js"></script> -->
+  </head>
+  <body>
+    <header></header>
+    <button onclick="showTotalPrices()">Show total price:</button>
+    <button onclick="showCart()">Show what is in Cart:</button>
+    <button onclick="clearNode()">Empty Cart and Node:</button>
+    <button id="hide">Hide Cart !</button>
+    <button onclick="finalCheckout()">Checkout !</button>
+    <div id="error"></div>
+    <div id="totalcart"></div>
+    <div id="totalprice"></div>
+    <table>
+      <caption>Menu </caption>
+      <thead>
+        <tr>
+          <th scope="col">Meat</th>
+          <th scope="col">Fish</th>
+          <th scope="col">Chicken</th>
+          <th scope="col">Vegan</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><form><img src="images/beef-rice.jpg" alt="meat meal" style="width:65%">
+            <input name="title" value="Beef Meal" type="hidden">
+            <h1 class="title">Beef Meal</h1>
+            <p class="price" >$19.99</p>
+            <input name="price" value="19.99" type="hidden">   
+            <p><button onClick="addToCart()">Add to Cart</button></p></form>
+          </td>
+          <td><form><img src="images/shrimps.jpg" alt="shrimp meal" style="width:95%">
+            <h1 class="title">Shrimp Meal</h1>
+            <input name="title" value="Shrimp Meal" type="hidden">
+            <p class="price" >$21.50</p>
+            <input name="price" value="21.50" type="hidden">            
+            <p><button onClick="addToCart()">Add to Cart</button>
+            </p></form>
+          </td>
+          <td><form><img src="images/chicken-quinoa.png" alt="Chicken Meal" style="width:133%">
+            <h1 class="title">Chicken Meal</h1>
+            <input name="title" value="Chicken Meal" type="hidden">
+            <p class="price" >$18.99</p>
+            <input name="price" value="18.99" type="hidden">            
+            <p><button onClick="addToCart()">Add to Cart</button>
+            </p></form>
+          </td>
+          <td><form><img src="images/brocoli-rice.png" alt="veggie meal" style="width:42%">
+            <h1 class="title">Veggie Meal</h1>
+            <input name="title" value="Veggie Meal" type="hidden">
+            <p class="price" >$13.99</p>
+            <input name="price" value="13.99" type="hidden">            
+            <p><button onClick="addToCart()">Add to Cart</button>
+            </p></form>
+          </td>
+        </tr>
+        <tr>
+            <td><form><img src="images/beef-rice.jpg" alt="meat meal" style="width:65%">
+              <input name="title" value="Beef Meal" type="hidden">
+              <h1 class="title">Beef Meal</h1>
+              <p class="price" >$19.99</p>
+              <input name="price" value="19.99" type="hidden">   
+              <p><button onClick="addToCart()">Add to Cart</button></p></form>
+            </td>
+            <td>
+              <form><img src="images/shrimps.jpg" alt="shrimp meal" style="width:95%">
+                <h1 class="title">Shrimp Meal</h1>
+                <input name="title" value="Shrimp Meal" type="hidden">
+                <p class="price" >$21.50</p>
+                <input name="price" value="21.50" type="hidden">            
+                <p><button onClick="addToCart()">Add to Cart</button>
+                </p></form>
+            </td>
+            <td><form><img src="images/chicken-quinoa.png" alt="Chicken Meal" style="width:133%">
+              <h1 class="title">Chicken Meal</h1>
+              <input name="title" value="Chicken Meal" type="hidden">
+              <p class="price" >$18.99</p>
+              <input name="price" value="18.99" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+            <td><form><img src="images/brocoli-rice.png" alt="veggie meal" style="width:42%">
+              <h1 class="title">Veggie Meal</h1>
+              <input name="title" value="Veggie Meal" type="hidden">
+              <p class="price" >$13.99</p>
+              <input name="price" value="13.99" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+        </tr>
+        <tr>
+            <td><form><img src="images/beef-rice.jpg" alt="meat meal" style="width:65%">
+              <input name="title" value="Beef Meal" type="hidden">
+              <h1 class="title">Beef Meal</h1>
+              <p class="price" >$19.99</p>
+              <input name="price" value="19.99" type="hidden">   
+              <p><button onClick="addToCart()">Add to Cart</button></p></form>
+            </td>
+            <td><form><img src="images/shrimps.jpg" alt="shrimp meal" style="width:95%">
+              <h1 class="title">Shrimp Meal</h1>
+              <input name="title" value="Shrimp Meal" type="hidden">
+              <p class="price" >$21.50</p>
+              <input name="price" value="21.50" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+            <td><form><img src="images/chicken-quinoa.png" alt="Chicken Meal" style="width:133%">
+              <h1 class="title">Chicken Meal</h1>
+              <input name="title" value="Chicken Meal" type="hidden">
+              <p class="price" >$18.99</p>
+              <input name="price" value="18.99" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+            <td><form><img src="images/brocoli-rice.png" alt="veggie meal" style="width:42%">
+              <h1 class="title">Veggie Meal</h1>
+              <input name="title" value="Veggie Meal" type="hidden">
+              <p class="price" >$13.99</p>
+              <input name="price" value="13.99" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+        </tr>
+        <tr>
+            <td><form><img src="images/beef-rice.jpg" alt="meat meal" style="width:65%">
+              <input name="title" value="Beef Meal" type="hidden">
+              <h1 class="title">Beef Meal</h1>
+              <p class="price" >$19.99</p>
+              <input name="price" value="19.99" type="hidden">   
+              <p><button onClick="addToCart()">Add to Cart</button></p></form>
+            </td>
+            <td><form><img src="images/shrimps.jpg" alt="shrimp meal" style="width:95%">
+              <h1 class="title">Shrimp Meal</h1>
+              <input name="title" value="Shrimp Meal" type="hidden">
+              <p class="price" >$21.50</p>
+              <input name="price" value="21.50" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+            <td><form><img src="images/chicken-quinoa.png" alt="Chicken Meal" style="width:133%">
+              <h1 class="title">Chicken Meal</h1>
+              <input name="title" value="Chicken Meal" type="hidden">
+              <p class="price" >$18.99</p>
+              <input name="price" value="18.99" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+            <td><form><img src="images/brocoli-rice.png" alt="veggie meal" style="width:42%">
+              <h1 class="title">Veggie Meal</h1>
+              <input name="title" value="Veggie Meal" type="hidden">
+              <p class="price" >$13.99</p>
+              <input name="price" value="13.99" type="hidden">            
+              <p><button onClick="addToCart()">Add to Cart</button>
+              </p></form>
+            </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <!-- <input type="text" id="text1">Cart</input> -->
+          <th id='checkout' scope="row" colspan="2">Checkout:</th>
+          <td colspan="2"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+  <script type="text/javascript" src="workingcart.js"></script>
 </html>

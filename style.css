@@ -55,7 +55,7 @@ html {
 /* graphics and colors */
 
 thead, tfoot {
-  background: url(leopardskin.jpg);
+  background: url(images/leopardskin.jpg);
   color: white;
   text-shadow: 1px 1px 1px black;
 }
@@ -75,7 +75,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr {
-  background-image: url(noise.png);
+  background-image: url(images/noise.png);
 }
 
 table {

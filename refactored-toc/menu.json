@@ -7,12 +7,14 @@
      {
        "name": "Beefplate",
        "price": 21,
+       "img": "brocoli-rice2.jpg",
        "secretIdentity": "beefo",
        "description": "a delicious meal filled with nutrients",
        "ingredients": [
          "rice",
          "peas",
-         "carrots"
+         "carrots",
+         "sauce"
        ]
      }
    ],
@@ -20,6 +22,7 @@
     {
       "name": "Chickenplate",
       "price": 22,
+      "img": "chicken-quinoa-compressed.png",
       "secretIdentity": "chico",
       "description": "a delicious meal filled with nutrients",
       "ingredients": [

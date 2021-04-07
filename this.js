@@ -61,11 +61,7 @@ for (let i = 0; i < allMenus.length; i++) {
                   '<h3 class="title">'+name+'</h3>'+
                   '<p class="price" >'+"$"+price+'</p>' +
                   '<br>' + 
-<<<<<<< HEAD
                   '<input name="price"'+'value='+price+' type="hidden">' +
-=======
-                  '<input name="price"'+'value='+price+'" type="hidden">' +
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1
                   '<br>' + 
                   '<p><button onClick="addToCart()">Add to Cart</button></p></form>'+
                   '<p><button onClick="removeFromCart()">Remove</button></p></form>';
@@ -114,13 +110,8 @@ function addToCart() {
     
       let sum=arrayOfPrices.reduce(function(a, b){return a+b;});
       totalcart.innerHTML = arrayOfTitles + "<br> Total Price: "+ "$"+sum;
-<<<<<<< HEAD
       // let totalsum = document.getElementById("totalForm");
       // totalsum.innerHTML = "Total:"+"$"+ sum
-=======
-      let totalsum = document.getElementById("totalForm");
-      totalsum.innerHTML = "Total:"+"$"+ sum
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1
       console.log(sum)
       // return sum;
   }
@@ -136,7 +127,6 @@ function removeFromCart() {
   let price = event.target.form.price.value;
   let title = event.target.form.title.value;
   // debugger;
-<<<<<<< HEAD
   // the problem was here I needed to change the type of price to Float so it works with 
   // an array of integers
   let parse_price = parseFloat(price);
@@ -146,22 +136,12 @@ function removeFromCart() {
   const indexTitle = arrayOfTitles.indexOf(title)
   const indexPrice = arrayOfPrices.indexOf(parse_price)
 
-=======
-  console.log(arrayOfPrices);
-  console.log(arrayOfTitles);
-  const indexTitle = arrayOfTitles.indexOf(title)
-  const indexPrice = arrayOfPrices.indexOf(price)
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1
   // debugger;
   errorElement.innerHTML = "";    
   // let prices = price.slice(1,6);
   // let parse_price = parseFloat(price);
   if (arrayOfPrices.length === 0){
-<<<<<<< HEAD
     totalcart.textContent = "Nothing selected";
-=======
-    errorElement.innerHTML = "Nothing selected";
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1
   }
   else {
     // debugger;
@@ -177,7 +157,6 @@ function removeFromCart() {
       // TODO: I need the id of the item how else am I going to know which item to remove
         // let sub=arrayOfPrices.reduce(function(a, b){return a-b;});
         // If meatmenu selected; delete name and price;
-<<<<<<< HEAD
         
         // delete arrayOfPrices.indexPrice;
         arrayOfPrices.splice(indexPrice,1);
@@ -191,17 +170,6 @@ function removeFromCart() {
         // this is for the checkout form
         // let totalsub = document.getElementById("totalForm");
         // totalsub.innerHTML = "Total:"+"$"+ arrayOfPrices
-=======
-        // I can use delete but I need to have the object
-        // delete arrayOfPrices.indexPrice;
-        // arrayOfPrices.splice(indexPrice,1);
-        // pop only removes end of the array I think so I need to get the index of title
-        arrayOfTitles.splice(indexTitle,1);
-        arrayOfPrices.splice(indexPrice,1)
-        totalcart.innerHTML = arrayOfTitles + "<br> Total Price: "+ "$"+arrayOfPrices;
-        let totalsub = document.getElementById("totalForm");
-        totalsub.innerHTML = "Total:"+"$"+ arrayOfPrices
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1
        
     }
       // return sum;
@@ -210,7 +178,6 @@ function removeFromCart() {
   price.value = "";
   
 }
-<<<<<<< HEAD
 // let cartButton = document.getElementById('showCartButton');
 // cartButton.addEventListener("click", (event)=>{
 //   totalcart.classList.toggle("hidden");
@@ -221,13 +188,6 @@ function clearNode(){
   // debugger;
   totalcart.textContent = 'Cart is Empty now'
   // totalPriceElement.textContent = 'No prices';
-=======
-
-// clearing what is inside the cart
-function clearNode(){
-  totalcart.innerHTML = "";
-  totalPriceElement.innerHTML = "";
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1
   // checkout.innerHTML = "";
   arrayOfTitles.splice(0, arrayOfTitles.length);
   arrayOfPrices.splice(0, arrayOfPrices.length);
@@ -250,8 +210,4 @@ function myCheckout() {
   var popup = document.getElementById("checkoutform");
   popup.classList.toggle("show");
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 6c1181e5de61892c9278921e765517f006c8c8c1

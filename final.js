@@ -157,7 +157,7 @@ function removeFromCart() {
         // arrayOfPrices.splice(indexPrice,1);
         // pop only removes end of the array I think so I need to get the index of title
         arrayOfTitles.splice(indexTitle,1);
-        arrayOfTitles.splice(indexPrice,1)
+        arrayOfPrices.splice(indexPrice,1)
         totalcart.innerHTML = arrayOfTitles + "<br> Total Price: "+ "$"+arrayOfPrices;
         let totalsub = document.getElementById("totalForm");
         totalsub.innerHTML = "Total:"+"$"+ arrayOfPrices

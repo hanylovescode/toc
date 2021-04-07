@@ -1,0 +1,38 @@
+{
+   "menuName": "Taste of Colombia",
+   "homeTown": "San Diego",
+   "formed": 2021,
+   "active": true,
+   "allMenusJson": [
+      {
+          "meatMenu": [
+            {
+              "name": "Beefplate",
+              "price": 21,
+              "img": "brocoli-rice2.jpg",
+              "secretIdentity": "beefo",
+              "description": "a delicious meal filled with nutrients",
+              "ingredients": [
+                "rice",
+                "peas",
+                "carrots",
+                "sauce"
+              ]
+            }
+          ],
+          "chickenMenu": [
+            {
+              "name": "Chickenplate",
+              "price": 22,
+              "img": "chicken-quinoa-compressed.png",
+              "secretIdentity": "chico",
+              "description": "a delicious meal filled with nutrients",
+              "ingredients": [
+                "rice",
+                "vegtebles"
+              ]
+            }
+          ]
+        }
+   ]
+}
